@@ -172,5 +172,6 @@
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
     <Build Include="dbo\Stored Procedures\allPosts.sql" />
+    <Build Include="dbo\Stored Procedures\getUser.sql" />
   </ItemGroup>
 </Project>
