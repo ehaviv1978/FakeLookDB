@@ -173,5 +173,6 @@
     </Build>
     <Build Include="dbo\Stored Procedures\allPosts.sql" />
     <Build Include="dbo\Stored Procedures\getUser.sql" />
+    <Build Include="dbo\Stored Procedures\searchUsers.sql" />
   </ItemGroup>
 </Project>
