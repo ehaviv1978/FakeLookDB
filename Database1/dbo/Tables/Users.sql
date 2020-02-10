@@ -3,10 +3,10 @@
     [FirstName]  NVARCHAR (50)  NOT NULL,
     [LastName]   NVARCHAR (50)  NOT NULL,
     [Password]   NVARCHAR (30)  NOT NULL,
-    [Age]        INT            NULL,
+    [BirthDate]        DATE            NULL,
     [Address]    NVARCHAR (MAX) NULL,
     [Job]        NVARCHAR (MAX) NULL,
-    [DateJoined] DATETIME       NOT NULL,
+    [DateJoined] DATE       NOT NULL,
     CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

@@ -1,12 +1,12 @@
-﻿-- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
--- =============================================
-CREATE PROCEDURE AddPost 
+﻿CREATE PROCEDURE AddPost 
+	@Image varchar(MAX),
+	@UserId int,
+	@Description varchar(MAX),
+	@LocationStr varchar(MAX)
 AS
-BEGIN
-	INSERT INTO Posts
-	VALUES ('https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg', 
-	2, 'Butterfly',(geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656 )', 4326)),CURRENT_TIMESTAMP);
-END
+	DECLARE @geographyPoint geography = geography::Point('47.65100', '-122.34900', '4326');
+    INSERT INTO 
+		Posts(Image, UserId,Description,Location,TimePosted) 
+	VALUES 
+		(@Image, @UserId,@Description,@geographyPoint,CURRENT_TIMESTAMP)
+return 0

@@ -175,4 +175,7 @@
     <Build Include="dbo\Stored Procedures\getUser.sql" />
     <Build Include="dbo\Stored Procedures\searchUsers.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Database1.refactorlog" />
+  </ItemGroup>
 </Project>

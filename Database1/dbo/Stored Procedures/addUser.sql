@@ -1,13 +1,14 @@
-﻿-- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
--- =============================================
-CREATE PROCEDURE [dbo].[addUser]
+﻿CREATE PROCEDURE [dbo].[addUser]
+	@FirstName varchar(50) = 'John',
+	@LastName varchar(50) ='Doe',
+	@Password varchar(50) = '1234',
+	@BirthDate date = '2000-1-1',
+	@Job varchar(MAX),
+	@Address varchar(MAX)
+
 AS
-BEGIN
     INSERT INTO 
-		Users (FirstName, LastName,Password,DateJoined) 
+		Users (FirstName, LastName,Password,BirthDate,Job,Address,DateJoined) 
 	VALUES 
-		('John', 'Doe', '1234',CURRENT_TIMESTAMP)
-END;
+		(@FirstName, @LastName,@Password,@BirthDate,@Job,@Address,CURRENT_TIMESTAMP)
+return 0
