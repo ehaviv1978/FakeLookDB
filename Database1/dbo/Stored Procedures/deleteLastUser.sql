@@ -7,5 +7,5 @@ CREATE PROCEDURE deleteLastUser
 AS
 	BEGIN
 		DELETE FROM Users
-		WHERE ID=(SELECT MAX(id) FROM Users)
+		WHERE Id=(SELECT MAX(Id) FROM Users)
 	END;
