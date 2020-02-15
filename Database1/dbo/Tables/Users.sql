@@ -7,6 +7,7 @@
     [Address]    NVARCHAR (MAX) NULL,
     [Job]        NVARCHAR (MAX) NULL,
     [DateJoined] DATE       NOT NULL,
+    [Picture] VARBINARY(MAX) NULL, 
     CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
