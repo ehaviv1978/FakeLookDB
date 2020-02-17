@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Posts] (
     [Id]          INT               IDENTITY (1, 1) NOT NULL,
-    [Image]       NVARCHAR (MAX)    NOT NULL,
+    [Image]       VARBINARY(MAX)    NOT NULL,
     [UserId]      INT               NOT NULL,
     [Description] NVARCHAR (MAX)    NULL,
     [Location]    [sys].[geography] NOT NULL,
