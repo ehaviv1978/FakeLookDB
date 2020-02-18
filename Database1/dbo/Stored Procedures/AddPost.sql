@@ -1,13 +1,14 @@
-﻿CREATE PROCEDURE AddPost 
-	@Image varchar(MAX),
-	@UserId int,
-	@Description varchar(MAX),
-	@LatGPS float,
-	@LongGPS float
+﻿CREATE PROCEDURE addPost 
+	@image varbinary(MAX) = null,
+	@userId int,
+	@description varchar(200) = null,
+	@latGPS float,
+	@longGPS float
 AS
-	DECLARE @geographyPoint geography = geography::Point(@LatGPS, @LongGPS, 4326);
+BEGIN
+	DECLARE @geographyPoint geography = geography::Point(@latGPS, @longGPS, 4326);
     INSERT INTO 
-		Posts(Image, UserId,Description,Location,TimePosted) 
+		Posts(image, userId,description,location,timePosted) 
 	VALUES 
-		(@Image, @UserId,@Description,@geographyPoint,CURRENT_TIMESTAMP)
-return 0
+		(@image, @userId,@description,@geographyPoint,CURRENT_TIMESTAMP)
+END

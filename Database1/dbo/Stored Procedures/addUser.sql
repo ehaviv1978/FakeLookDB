@@ -1,14 +1,15 @@
 ﻿CREATE PROCEDURE [dbo].[addUser]
-	@FirstName varchar(50) = 'John',
-	@LastName varchar(50) ='Doe',
-	@Password varchar(50) = '1234',
-	@BirthDate date = '2000-1-1',
-	@Job varchar(MAX),
-	@Address varchar(MAX)
-
+	@firstName varchar(50),
+	@lastName varchar(50),
+	@password varchar(30),
+	@birthDate date,
+	@address varchar(50) = null,
+	@job varchar(50) = null,
+	@picture varbinary(MAX) = null
 AS
+BEGIN
     INSERT INTO 
-		Users (FirstName, LastName,Password,BirthDate,Job,Address,DateJoined) 
+		Users (firstName, lastName,password,birthDate,job,address,dateJoined,picture) 
 	VALUES 
-		(@FirstName, @LastName,@Password,@BirthDate,@Job,@Address,CURRENT_TIMESTAMP)
-return 0
+		(@firstName, @lastName,@password,@birthDate,@job,@address,CURRENT_TIMESTAMP,@picture)
+END

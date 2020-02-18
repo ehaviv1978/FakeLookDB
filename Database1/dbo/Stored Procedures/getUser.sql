@@ -1,6 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[getUser]
-	@UserId int = 0
+	@userId int
 AS
-	SELECT * FROM Users
-	WHERE Id=@UserId;
-RETURN 0
+BEGIN
+	SELECT * FROM Users u
+	WHERE u.userId=@userId;
+END

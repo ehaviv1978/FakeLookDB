@@ -1,9 +1,11 @@
 ﻿CREATE TABLE [dbo].[Comments] (
-    [Id]     INT      IDENTITY (1, 1) NOT NULL,
-    [UserId] INT      NOT NULL,
-    [PostId] INT      NOT NULL,
-    [Time]   DATETIME NOT NULL,
-    CONSTRAINT [PK_Comments] PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_Comments_Users] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Users] ([Id])
+    [commentId]     INT      IDENTITY (1, 1) NOT NULL,
+    [userId] INT      NOT NULL,
+    [postId] INT      NOT NULL,
+    [timeCommented]   DATETIME NOT NULL,
+    [commentContent] NVARCHAR(50) NOT NULL, 
+    CONSTRAINT [PK_Comments] PRIMARY KEY CLUSTERED ([commentId] ASC),
+    CONSTRAINT [FK_Comments_Users] FOREIGN KEY ([userId]) REFERENCES [dbo].[Users] ([userId]), 
+    CONSTRAINT [FK_Comments_ToTable] FOREIGN KEY ([postId]) REFERENCES [dbo].[Posts] ([postId])
 );
 

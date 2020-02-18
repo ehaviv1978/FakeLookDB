@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[searchUsers]
-	@str varchar(max) = 0
+	@searchParam varchar(100)
 AS
 	select * from Users
-	where CHARINDEX(@str,FirstName+LastName) !=0;
+	where CHARINDEX(@searchParam,firstName+lastName) !=0;
 RETURN 0
