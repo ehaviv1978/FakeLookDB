@@ -8,7 +8,7 @@ AS
 BEGIN
 	DECLARE @geographyPoint geography = geography::Point(@latGPS, @longGPS, 4326);
     INSERT INTO 
-		Posts(image, userId,description,location,timePosted) 
+		Posts(picture, userId,description,location,timePosted) 
 	VALUES 
 		(@image, @userId,@description,@geographyPoint,CURRENT_TIMESTAMP)
 END

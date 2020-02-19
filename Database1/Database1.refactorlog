@@ -350,4 +350,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[FK_CommentTags_Comments]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="e0ed0273-2f69-4d96-bc0e-d2d47a855ad8" ChangeDateTime="02/19/2020 08:55:48">
+    <Property Name="ElementName" Value="[dbo].[Posts].[image]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Posts]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="picture" />
+  </Operation>
 </Operations>
