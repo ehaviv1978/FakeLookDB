@@ -5,7 +5,7 @@
 	@birthDate date,
 	@address varchar(50) = null,
 	@job varchar(50) = null,
-	@picture varbinary(MAX) = null
+	@picture varchar(MAX) = null
 AS
 BEGIN
     INSERT INTO 

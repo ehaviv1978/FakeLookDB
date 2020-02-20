@@ -170,6 +170,7 @@
     <Build Include="dbo\Tables\PostTagPerson.sql" />
     <Build Include="dbo\Tables\PostTags.sql" />
     <Build Include="dbo\Tables\CommentTags.sql" />
+    <Build Include="dbo\Stored Procedures\changeUserPicture.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database1.refactorlog" />

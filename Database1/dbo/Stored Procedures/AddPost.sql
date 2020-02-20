@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE addPost 
-	@image varbinary(MAX) = null,
+   @picture varchar(MAX) = null,
 	@userId int,
 	@description varchar(200) = null,
 	@latGPS float,
@@ -10,5 +10,5 @@ BEGIN
     INSERT INTO 
 		Posts(picture, userId,description,location,timePosted) 
 	VALUES 
-		(@image, @userId,@description,@geographyPoint,CURRENT_TIMESTAMP)
+		(@picture, @userId,@description,@geographyPoint,CURRENT_TIMESTAMP)
 END
