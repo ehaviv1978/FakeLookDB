@@ -5,11 +5,12 @@
 	@birthDate date,
 	@address varchar(50) = null,
 	@job varchar(50) = null,
-	@picture varchar(MAX) = null
+	@picture varchar(MAX) = null,
+	@email varchar(100)
 AS
 BEGIN
     INSERT INTO 
-		Users (firstName, lastName,password,birthDate,job,address,dateJoined,picture) 
+		Users (firstName, lastName,password,birthDate,job,address,dateJoined,picture,email) 
 	VALUES 
-		(@firstName, @lastName,@password,@birthDate,@job,@address,CURRENT_TIMESTAMP,@picture)
+		(@firstName, @lastName,@password,@birthDate,@job,@address,CURRENT_TIMESTAMP,@picture,@email)
 END
