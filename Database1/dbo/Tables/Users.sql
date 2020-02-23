@@ -8,6 +8,7 @@
     [job]        NVARCHAR (50) NULL,
     [dateJoined] DATE       NOT NULL,
     [picture] VARCHAR(MAX) NULL, 
-    CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([userId] ASC)
+    [email] NVARCHAR(100) NOT NULL Unique, 
+    CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([userId])
 );
 
