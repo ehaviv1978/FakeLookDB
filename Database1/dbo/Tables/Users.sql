@@ -3,7 +3,7 @@
     [firstName]  NVARCHAR (50)  NOT NULL,
     [lastName]   NVARCHAR (50)  NOT NULL,
     [password]   NVARCHAR (30)  NOT NULL,
-    [birthDate]        DATE            NOT NULL,
+    [birthDate]        DATE            NULL,
     [address]    NVARCHAR (50) NULL,
     [job]        NVARCHAR (50) NULL,
     [dateJoined] DATE       NOT NULL,
