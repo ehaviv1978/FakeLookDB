@@ -4,7 +4,7 @@
 AS
 BEGIN
     SELECT top 1 Posts.postId, Posts.description,Posts.picture,Posts.location.Lat 'lat', 
-	Posts.location.Long 'long', Posts.timePosted,Users.firstName,Users.lastName,users.picture as userPic ,
+	Posts.location.Long 'long', Posts.timePosted,Users.firstName,Users.lastName,users.userId,users.picture as userPic ,
 	(SELECT count (*)
 	FROM PostLikes
 	WHERE PostLikes.postId = Posts.postId) as postLikeAmount
