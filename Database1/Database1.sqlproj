@@ -179,6 +179,8 @@
     <Build Include="dbo\Stored Procedures\userLogIn.sql" />
     <Build Include="dbo\Stored Procedures\getPostById.sql" />
     <Build Include="dbo\Stored Procedures\searchPosts.sql" />
+    <Build Include="dbo\Stored Procedures\addCommentLike.sql" />
+    <Build Include="dbo\Stored Procedures\removeCommentLike.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database1.refactorlog" />
