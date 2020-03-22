@@ -178,6 +178,7 @@
     <Build Include="dbo\Stored Procedures\removePostLike.sql" />
     <Build Include="dbo\Stored Procedures\userLogIn.sql" />
     <Build Include="dbo\Stored Procedures\getPostById.sql" />
+    <Build Include="dbo\Stored Procedures\searchPosts.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database1.refactorlog" />
