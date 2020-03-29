@@ -2,7 +2,7 @@
     [userId]         INT            IDENTITY (1, 1) NOT NULL,
     [firstName]  NVARCHAR (50)  NOT NULL,
     [lastName]   NVARCHAR (50)  NOT NULL,
-    [password]   NVARCHAR (30)  NOT NULL,
+    [password]   NVARCHAR (MAX)  NOT NULL,
     [birthDate]        DATE            NULL,
     [address]    NVARCHAR (50) NULL,
     [job]        NVARCHAR (50) NULL,

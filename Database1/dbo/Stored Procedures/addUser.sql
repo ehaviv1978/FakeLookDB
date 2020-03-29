@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[addUser]
 	@firstName varchar(50),
 	@lastName varchar(50),
-	@password varchar(30),
+	@password varchar(MAX),
 	@birthDate date,
 	@address varchar(50) = null,
 	@job varchar(50) = null,
@@ -13,4 +13,5 @@ BEGIN
 		Users (firstName, lastName,password,birthDate,job,address,dateJoined,picture,email) 
 	VALUES 
 		(@firstName, @lastName,@password,@birthDate,@job,@address,CURRENT_TIMESTAMP,@picture,@email)
+	SELECT SCOPE_IDENTITY() as userId;
 END
