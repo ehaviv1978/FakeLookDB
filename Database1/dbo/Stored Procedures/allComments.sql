@@ -5,6 +5,8 @@ AS
 BEGIN
     SELECT 
         c.commentId,c.commentContent,c.timeCommented,u.firstName,u.lastName,u.picture, u.userId,
+        STUFF((SELECT ','+ tagContent
+	    FROM CommentTags WHERE [commentId] = c.commentId FOR XML PATH('')),1,1,'') AS commentTags,
 		(SELECT count (*)
 	    FROM CommentLikes
 	    WHERE CommentLikes.commentId = c.commentId) as commentLikeAmount

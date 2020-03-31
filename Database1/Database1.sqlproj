@@ -182,6 +182,12 @@
     <Build Include="dbo\Stored Procedures\addCommentLike.sql" />
     <Build Include="dbo\Stored Procedures\removeCommentLike.sql" />
     <Build Include="dbo\Stored Procedures\updatePassword.sql" />
+    <Build Include="dbo\Stored Procedures\addPostTag.sql" />
+    <Build Include="dbo\Stored Procedures\addCommentTag.sql" />
+    <Build Include="dbo\Stored Procedures\getCommentTags.sql" />
+    <Build Include="dbo\Stored Procedures\getPostTags.sql" />
+    <Build Include="dbo\Stored Procedures\removePostTag.sql" />
+    <Build Include="dbo\Stored Procedures\removeCommentTag.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database1.refactorlog" />

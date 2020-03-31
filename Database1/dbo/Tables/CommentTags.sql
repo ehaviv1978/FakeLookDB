@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[CommentTags]
 (
-	[tagId] INT NOT NULL PRIMARY KEY, 
+	[tagContent] NVARCHAR(50) NOT NULL, 
     [commentId] INT NOT NULL, 
-    CONSTRAINT [FK_CommentTags_Tags] FOREIGN KEY ([tagId]) REFERENCES [dbo].[Tags]([tagId]), 
+    CONSTRAINT [PK_CommentTags] PRIMARY KEY CLUSTERED ([commentId], [tagContent]),
     CONSTRAINT [FK_CommentTags_Comments] FOREIGN KEY ([commentId]) REFERENCES [dbo].[Comments]([commentId])
 )

@@ -357,4 +357,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="picture" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="54218e34-a22b-4afc-b7a3-3230719965b4" ChangeDateTime="03/30/2020 03:31:53">
+    <Property Name="ElementName" Value="[dbo].[PostTags].[tagId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostTags]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="tagContent" />
+  </Operation>
 </Operations>
