@@ -188,6 +188,7 @@
     <Build Include="dbo\Stored Procedures\getPostTags.sql" />
     <Build Include="dbo\Stored Procedures\removePostTag.sql" />
     <Build Include="dbo\Stored Procedures\removeCommentTag.sql" />
+    <Build Include="dbo\Stored Procedures\getMapPosts.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database1.refactorlog" />
