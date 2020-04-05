@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE addPost 
     @picture varchar(MAX) = null,
 	@userId int,
-	@description varchar(200) = null,
+	@description nvarchar(200) = null,
 	@latGPS float,
 	@longGPS float
 AS
