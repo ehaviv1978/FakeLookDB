@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[updatePassword]
 	@userId int = 0,
-	@password nvarchar(30) = "1"
+	@password nvarchar(MAX) = "1"
 AS
 	UPDATE Users
 	SET password =@password
