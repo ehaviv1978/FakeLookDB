@@ -182,6 +182,7 @@
     <Build Include="dbo\Stored Procedures\addCommentLike.sql" />
     <Build Include="dbo\Stored Procedures\removeCommentLike.sql" />
     <Build Include="dbo\Stored Procedures\updatePassword.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateAllPassword.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database1.refactorlog" />
