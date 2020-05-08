@@ -4,9 +4,9 @@
 	@minLong int =0,
 	@maxLong int =0,
 	@userId int =0,
-	@tag nvarchar(50),
-	@minDate date = '2000-01-01',
-	@maxDate date = getdate,
+	@tag nvarchar(50)='~~~~',
+	@minDate datetime = '1900-11-11',
+	@maxDate datetime ='3000-11-11',
 	@range int = 30000,
 	@latGPS float =0,
 	@longGPS float =0
@@ -17,16 +17,15 @@ AS
     FROM  Posts
     LEFT JOIN Users ON Posts.userId=Users.userId
 	where
-		 (not @userId =0) and
-				Posts.location.Lat > @minLat and Posts.location.Lat < @maxLat and
-				Posts.location.Long > @minLong and Posts.location.Long < @maxLong and
-				Posts.timePosted > @minDate and Posts.timePosted < @maxDate and
-				(@currentLocation.STDistance(geography::Point(Posts.location.Lat,Posts.location.Long, 4326)))/1000 < @range and
-				users.userId = @userId
-		or (@userId =0) and
-				Posts.location.Lat > @minLat and Posts.location.Lat < @maxLat and
-				Posts.location.Long > @minLong and Posts.location.Long < @maxLong and
-				Posts.timePosted > @minDate and Posts.timePosted < @maxDate and
-				(@currentLocation.STDistance(geography::Point(Posts.location.Lat,Posts.location.Long, 4326)))/1000 < @range
-
+		Posts.location.Lat > @minLat and Posts.location.Lat < @maxLat and
+		Posts.location.Long > @minLong and Posts.location.Long < @maxLong and
+		Posts.timePosted > @minDate and Posts.timePosted < @maxDate and
+		(@currentLocation.STDistance(geography::Point(Posts.location.Lat,Posts.location.Long, 4326)))/1000 < @range and
+		((@userId!=0 and
+		users.userId = @userId) or @userId=0) and 
+		(@tag!='~~~~' and
+		(CHARINDEX(@tag,STUFF((SELECT ','+ tagContent
+		FROM PostTags WHERE [postId] = Posts.postId FOR XML PATH('')),1,1,'')) !=0)or
+		@tag='~~~~')
+		
 RETURN 0
